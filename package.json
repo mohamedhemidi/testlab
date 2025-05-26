@@ -1,0 +1,17 @@
+{
+  "name": "testlab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "homepage": "https://mohamedhemidi.github.io/testlab",
+  "scripts": {
+    "deploy": "gh-pages -d .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
