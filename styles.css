@@ -1,0 +1,13 @@
+/* styles.css */
+.hero {
+    background-color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#watch {
+    font-size: 48px;
+    font-weight: bold;
+}
