@@ -91,7 +91,14 @@
         "script",
         "https://connect.facebook.net/en_US/fbevents.js"
       );
+
+      // Set consent to 'revoke' by default
+      fbq("consent", "revoke");
+
+      // Initialize the pixel
       fbq("init", "264319095357839");
+
+      // Track a page view (won’t send data until consent is granted)
       fbq("track", "PageView");
     </script>
   </head>
