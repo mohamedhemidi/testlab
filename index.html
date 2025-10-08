@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test Lab</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://frontend-test.secureprivacy.ai/script/6834cbd7a56840b560c1615f.js"></script>
+    <script src="https://frontend-test.secureprivacy.ai/script/68e69fafb905de88cd827ffb.js"></script>
 
     <!-- <script src="https://app.secureprivacy.ai/script/6870db516b6ffc1fd415203d.js"></script> -->
 
@@ -167,5 +167,14 @@
       async
       src="https://www.googletagmanager.com/gtag/js?id=AW-948837504"
     ></script>
+
+    <a href="http://localhost:5000/api/banner/dynamic?Domain=6834cbd7a56840b560c1615f&DeviceId=0.9620681756952973" target="_blank">Click to Call API</a>
+    <script>
+        // Optional: Use AJAX for a non-redirect call
+        fetch('http://localhost:5000/api/banner/dynamic?Domain=6834cbd7a56840b560c1615f&DeviceId=0.9620681756952973')
+            .then(response => response.text())
+            .then(data => console.log('API Response:', data))
+            .catch(error => console.error('Error:', error));
+    </script>
   </body>
 </html>
