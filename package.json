@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
-  "homepage": "https://mohamedhemidi.github.io/testlab",
+  "homepage": "https://mohamedhemidi.com",
   "scripts": {
     "deploy": "gh-pages -d .",
     "test": "echo \"Error: no test specified\" && exit 1"
