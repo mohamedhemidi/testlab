@@ -6,7 +6,13 @@
     <title>Test Lab</title>
     <link rel="stylesheet" href="styles.css" />
 
-    <!-- Google Tag Manager (loads immediately — no consent signals exist yet) -->
+    <!-- Test -->
+    <script src="https://frontend-test.secureprivacy.ai/script/69ea06413f464b03b5295d00.js"></script>
+
+    <!-- Staging -->
+    <!-- <script src="https://frontend-staging.secureprivacy.ai/script/6870db516b6ffc1fd415203d.js"></script> -->
+
+    <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -20,21 +26,6 @@
       })(window, document, "script", "dataLayer", "GTM-TLSB5TRV");
     </script>
     <!-- End Google Tag Manager -->
-
-    <!-- LATE CONSENT: CMP injected asynchronously after window load so gtm.start,
-         gtm.dom, and gtm.load all fire before any consent default is pushed -->
-    <script>
-      window.addEventListener("load", function () {
-        setTimeout(function () {
-          var s = document.createElement("script");
-          s.src = "https://frontend-test.secureprivacy.ai/script/69ea06413f464b03b5295d00.js";
-          document.head.appendChild(s);
-        }, 2000); // 2s after window load ensures gtm.load has already fired
-      });
-    </script>
-
-    <!-- Staging -->
-    <!-- <script src="https://frontend-staging.secureprivacy.ai/script/6870db516b6ffc1fd415203d.js"></script> -->
 
     <!--  Microsoft Clarity -->
     <!-- <script type="text/javascript">
@@ -79,21 +70,40 @@
     </script> -->
 
     <!-- Meta/Facebook Pixel Consent Mode -->
-    <!-- <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '906750311877379');
-    fbq('track', 'PageView');
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+      fbq("init", "906750311877379");
+      fbq("track", "PageView");
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=906750311877379&ev=PageView&noscript=1"
-    /></noscript> -->
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=906750311877379&ev=PageView&noscript=1"
+    /></noscript>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -108,16 +118,6 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <div class="hero">
-      <form
-        action="https://getform.io/f/cwtljpxa"
-        method="POST"
-        enctype="multipart/form-data"
-      >
-        <input type="email" name="email" />
-        <input type="text" name="name" />
-        <input type="file" name="file" />
-        <button type="submit">Send</button>
-      </form>
       <div id="watch"></div>
     </div>
     <div class="main-navigation">
@@ -157,10 +157,10 @@
             contentWindow.spEmbedData = config;
             contentWindow.document.head.appendChild(script);
           })(this, {
-            adminId: '4045',
+            adminId: '4332',
             pageUrl: window.location.href,
             initialLanguage: 'en',
-            policyIds: ['68e69fafb905de88cd827ffb'],
+            policyIds: ['69ea069e3f464b03b5295e4c'],
             displayHeader: true,
             displaySidebar: true,
             fitContentHeight: false,
@@ -173,7 +173,7 @@
     <script src="script.js"></script>
 
     <!-- GOOGLE ANALYTICS (Manual) -->
-    <!-- <script
+    <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-LZF76R26CZ"
     ></script>
@@ -185,12 +185,12 @@
       gtag("js", new Date());
 
       gtag("config", "G-LZF76R26CZ");
-    </script> -->
+    </script>
 
     <!-- GOOGLE ADS (Manual) -->
-    <!-- <script
+    <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=AW-948837504"
-    ></script> -->
+    ></script>
   </body>
 </html>
