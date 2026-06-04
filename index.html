@@ -6,8 +6,7 @@
     <title>Test Lab</title>
     <link rel="stylesheet" href="styles.css" />
 
-    <!-- Google Tag Manager -->
-    <!-- LATE CONSENT ISSUE: GTM loads before CMP, firing tags without consent signals -->
+    <!-- Google Tag Manager (loads immediately — no consent signals exist yet) -->
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -22,8 +21,17 @@
     </script>
     <!-- End Google Tag Manager -->
 
-    <!-- Test (CMP loads AFTER GTM — late consent) -->
-    <script src="https://frontend-test.secureprivacy.ai/script/69ea06413f464b03b5295d00.js"></script>
+    <!-- LATE CONSENT: CMP injected asynchronously after window load so gtm.start,
+         gtm.dom, and gtm.load all fire before any consent default is pushed -->
+    <script>
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          var s = document.createElement("script");
+          s.src = "https://frontend-test.secureprivacy.ai/script/69ea06413f464b03b5295d00.js";
+          document.head.appendChild(s);
+        }, 2000); // 2s after window load ensures gtm.load has already fired
+      });
+    </script>
 
     <!-- Staging -->
     <!-- <script src="https://frontend-staging.secureprivacy.ai/script/6870db516b6ffc1fd415203d.js"></script> -->
