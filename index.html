@@ -6,13 +6,8 @@
     <title>Test Lab</title>
     <link rel="stylesheet" href="styles.css" />
 
-    <!-- Test -->
-    <script src="https://frontend-test.secureprivacy.ai/script/69ea06413f464b03b5295d00.js"></script>
-
-    <!-- Staging -->
-    <!-- <script src="https://frontend-staging.secureprivacy.ai/script/6870db516b6ffc1fd415203d.js"></script> -->
-
     <!-- Google Tag Manager -->
+    <!-- LATE CONSENT ISSUE: GTM loads before CMP, firing tags without consent signals -->
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -26,6 +21,12 @@
       })(window, document, "script", "dataLayer", "GTM-TLSB5TRV");
     </script>
     <!-- End Google Tag Manager -->
+
+    <!-- Test (CMP loads AFTER GTM — late consent) -->
+    <script src="https://frontend-test.secureprivacy.ai/script/69ea06413f464b03b5295d00.js"></script>
+
+    <!-- Staging -->
+    <!-- <script src="https://frontend-staging.secureprivacy.ai/script/6870db516b6ffc1fd415203d.js"></script> -->
 
     <!--  Microsoft Clarity -->
     <!-- <script type="text/javascript">
