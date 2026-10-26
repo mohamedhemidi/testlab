@@ -13,7 +13,7 @@
     <!--  <script src="https://frontend-staging.secureprivacy.ai/script/6a4244555d306cb7ec325086.js"></script> -->
 
     <!-- Google Tag Manager -->
-      <!--<script>
+    <!--<script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -104,6 +104,17 @@
         style="display: none"
         src="https://www.facebook.com/tr?id=906750311877379&ev=PageView&noscript=1"
     /></noscript> -->
+    <!-- TEST LONG LOADING PAGES -->
+    <script>
+      console.log("Long-running task simulation started");
+
+      setTimeout(
+        () => {
+          console.log("30-minute test completed");
+        },
+        31 * 60 * 1000,
+      );
+    </script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
